@@ -16,7 +16,7 @@ class Canonical_check(unittest.TestCase):
         cls.driver.implicitly_wait(10)
 
         #initaiting file reader
-        excel_file=r'D:/OneDrive - CACTUS/Python/Sel_python/SEO_check/SEO_cano_data.xlsx'
+        excel_file= r'D:/OneDrive - CACTUS/Python/Sel_python/SEO_check/ROW/SEO_cano_data.xlsx'
         cls.df=pd.read_excel(excel_file,sheet_name='Canonical')
         cls.Urls=cls.df['URLs']
 
@@ -62,7 +62,7 @@ class Canonical_check(unittest.TestCase):
         print("Test execution completed")
 
 if __name__=='__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="..\\SEO_check\\Reports"))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="..//SEO_check//Reports"))
 
 
 

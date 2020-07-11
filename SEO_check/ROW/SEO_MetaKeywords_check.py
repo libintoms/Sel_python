@@ -16,8 +16,8 @@ class Meta_keywords_check(unittest.TestCase):
         cls.driver.implicitly_wait(10)
 
         #initaiting file reader
-        excel_file=r'D:/OneDrive - CACTUS/Python/Sel_python/SEO_check/SEO_metakeys_data.xlsx'
-        cls.df=pd.read_excel(excel_file,sheet_name='Meta_desc')
+        excel_file= r'D:/OneDrive - CACTUS/Python/Sel_python/SEO_check/ROW/SEO_metakeys_data.xlsx'
+        cls.df=pd.read_excel(excel_file,sheet_name='Meta_keys')
         cls.Urls=cls.df['URLs']
         cls.Meta_keys=cls.df['Meta keywords']
 
@@ -45,7 +45,7 @@ class Meta_keywords_check(unittest.TestCase):
                     output = "Meta keywords are correct"
                     print(output)
                     df1 = pd.DataFrame({'Status': [output]})
-                    df1.to_excel(self.writer, sheet_name='Meta_desc', header=None, index=False, startrow=row_num,
+                    df1.to_excel(self.writer, sheet_name='Title_data', header=None, index=False, startrow=row_num,
                                  startcol=2)
                     self.writer.save()
                     row_num = row_num + 1
@@ -53,7 +53,7 @@ class Meta_keywords_check(unittest.TestCase):
                     output = "Keyword mismatch:"+site_keywords
                     print(output)
                     df1 = pd.DataFrame({'Status': [output]})
-                    df1.to_excel(self.writer, sheet_name='Meta_desc', header=None, index=False, startrow=row_num,
+                    df1.to_excel(self.writer, sheet_name='Title_data', header=None, index=False, startrow=row_num,
                                  startcol=2)
                     self.writer.save()
                     row_num = row_num + 1
@@ -68,7 +68,7 @@ class Meta_keywords_check(unittest.TestCase):
         print("Test execution completed")
 
 if __name__=='__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="..\\SEO_check\\Reports"))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="..//SEO_check//Reports"))
 
 
 
