@@ -1,0 +1,8 @@
+[1015/230300.956:ERROR:process_info.cc(359)] UncheckedAllocate
+[1015/230301.029:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\LIBIN~1.THO\AppData\Local\Temp\scoped_dir23880_1990688892\Crashpad\attachments\91ccf67a-ce0e-4213-a893-e615fc8487bd: The system cannot find the path specified. (0x3)
+[1015/230436.283:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1015/230436.285:ERROR:exception_snapshot_win.cc(99)] thread ID 22580 not found in process
+[1015/230436.320:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1015/230436.320:ERROR:exception_snapshot_win.cc(99)] thread ID 24456 not found in process
+[1015/230436.390:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1015/230436.390:ERROR:exception_snapshot_win.cc(99)] thread ID 18268 not found in process
