@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2020-09-26 22:49:02</p>
+                <p class='attribute'><strong>Duration: </strong>0 ms</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>setUpClass (__main__</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">Canonical_check)</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">FileNotFoundError: [Errno 2] No such file or directory: 'D:/OneDrive - CACTUS/Python/Sel_python/SEO_check/ROW/Sacn_data.xlsx'</p><p style="color:maroon;">Traceback (most recent call last):
+  File "SEO_Canonical_check.py", line 20, in setUpClass
+    cls.df=pd.read_excel(excel_file,sheet_name='Canonical')
+  File "C:\Users\libin.thomas\AppData\Roaming\Python\Python38\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\libin.thomas\AppData\Roaming\Python\Python38\site-packages\pandas\io\excel\_base.py", line 824, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\libin.thomas\AppData\Roaming\Python\Python38\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+    super().__init__(filepath_or_buffer)
+  File "C:\Users\libin.thomas\AppData\Roaming\Python\Python38\site-packages\pandas\io\excel\_base.py", line 353, in __init__
+    self.book = self.load_workbook(filepath_or_buffer)
+  File "C:\Users\libin.thomas\AppData\Roaming\Python\Python38\site-packages\pandas\io\excel\_xlrd.py", line 36, in load_workbook
+    return open_workbook(filepath_or_buffer)
+  File "D:\OneDrive - CACTUS\Python\Sel_python\venv\lib\site-packages\xlrd\__init__.py", line 111, in open_workbook
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/OneDrive - CACTUS/Python/Sel_python/SEO_check/ROW/Sacn_data.xlsx'
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 0 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
